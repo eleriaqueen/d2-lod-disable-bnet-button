@@ -1,5 +1,5 @@
 Game.exe
-Base Address
+Base Address 0x00400000
 
 0x0043bf60      push    ebp
 0x0043bf61      mov     ebp, esp
