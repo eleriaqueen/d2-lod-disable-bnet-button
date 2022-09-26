@@ -1,0 +1,38 @@
+Game.exe
+Base Address
+
+0x0043bf60      push    ebp
+0x0043bf61      mov     ebp, esp
+0x0043bf63      sub     esp, 0x18
+0x0043bf66      push    edi
+0x0043bf67      xor     edi, edi
+
+[How to apply modification]
+
+Go to file offset 0x0003bf60
+
+Or search for hex string: 558BEC83EC185733FF
+
+Replace
+
+Asm:
+---
+0x0043bf60      push    ebp
+0x0043bf61      mov     ebp, esp
+
+Hex:
+---
+55
+8b eC
+
+With
+
+Asm:
+---
+0x0043bf60      xor    eax, eax
+0x0043bf61      ret
+
+Hex:
+---
+33 C0
+C3
